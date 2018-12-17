@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="23f84dac-9b76-43e6-9e66-1da9c4eaf064" name="self baidu" url="http://106.12.10.203">
+        <fileTransfer host="106.12.10.203" port="22" rootFolder="/data/wwwroot/mysqlmtop.top" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
