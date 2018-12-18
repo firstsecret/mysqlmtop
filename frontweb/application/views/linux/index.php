@@ -41,8 +41,8 @@
         <td><?php echo $item['disk_use_root'] ?></td>
         <td><?php echo $item['disk_use_data'] ?></td>
         <td><?php echo $item['disk_use_data'] ?></td>
-        <td><?php echo substring($item['mem_total']/1024/1024,0,5) ?>G</td>
-        <td><?php echo substring($item['mem_use']/1024/1024,0,5) ?>G</td>
+        <td><?php if ($item['mem_total']) { echo substring($item['mem_total']/1024/1024,0,5); } else { echo 0;}?>G</td>
+        <td><?php if  ($item['mem_use']) { echo substring($item['mem_use']/1024/1024,0,5); } else { echo 0; } ?>G</td>
         <td><a href="<?php echo site_url('linux/chart/'.$item['ip']) ?>">图表</a></td>
 	</tr>
  <?php endforeach;?>

@@ -39,11 +39,9 @@ class Linux extends Front_Controller {
         
         $data['cur_nav']='linux';
         $data['cur_host']=$host;
+
         $this->layout->view('linux/chart',$data);
     }
-    
-    
-    
 }
 
 /* End of file linux.php */

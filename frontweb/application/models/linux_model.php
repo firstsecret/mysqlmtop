@@ -8,6 +8,7 @@ class Linux_model extends CI_Model{
     
     function get_total_record($table){
         $query = $this->db->get($table);
+
 		if ($query->num_rows() > 0)
 		{
 			return $query->result_array();

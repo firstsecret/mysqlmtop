@@ -51,7 +51,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="<?php echo site_url('index/index') ?>">SKLCC服务器监控</a>
+          <a class="brand" href="<?php echo site_url('index/index') ?>">沃热卖监控</a>
           <div class="nav-collapse collapse">
 <?php  if($this->session->userdata('logged_in')!=1) {?>
  <p class="navbar-text pull-right">
