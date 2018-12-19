@@ -16,7 +16,6 @@ class Monitor extends Front_Controller {
 	{
         
         $data["datalist"]=$this->monitor->get_total_record_status();
-
         $setval["application_id"]=isset($_GET["application_id"]) ? $_GET["application_id"] : "";
         $setval["server_id"]=isset($_GET["server_id"]) ? $_GET["server_id"] : "";
         $setval["connect"]=isset($_GET["connect"]) ? $_GET["connect"] : "";

@@ -25,7 +25,7 @@ def main():
          for ip in servers:
              if ip <> '':
                  print ip
-		 p = Process(target = check_server_resource, args=(ip,))
+		         p = Process(target = check_server_resource, args=(ip,))
                  plist.append(p)
                  p.start()
 
