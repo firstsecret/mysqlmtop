@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c50c9f2b-2a03-4b18-bb73-303f1e73a7c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mysqlmtop/check_mysql8_status_ext.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysqlmtop/check_mysql8_widget_bigtable.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysqlmtop/check_mysql8_widget_hit_rate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontweb/application/controllers/monitor.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontweb/application/controllers/monitor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysqlmtop/check_linux_resource.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysqlmtop/check_linux_resource.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,11 +45,13 @@
     <session id="-505507718">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -61,6 +59,7 @@
           <entry key="check_mysql8_status_ext" value="1" />
           <entry key="html" value="2" />
           <entry key="ini" value="1" />
+          <entry key="md" value="1" />
           <entry key="mtopctl" value="2" />
           <entry key="php" value="21" />
           <entry key="py" value="19" />
@@ -71,18 +70,21 @@
         <counts>
           <entry key="HTML" value="2" />
           <entry key="Ini" value="1" />
+          <entry key="Markdown" value="1" />
           <entry key="PHP" value="21" />
           <entry key="PLAIN_TEXT" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="md" value="12" />
           <entry key="php" value="203" />
           <entry key="py" value="186" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="Markdown" value="12" />
           <entry key="PHP" value="203" />
           <entry key="PLAIN_TEXT" value="186" />
         </counts>
@@ -94,7 +96,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontweb/application/views/monitor/process.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="2346">
               <caret line="138" column="33" selection-start-line="138" selection-start-column="33" selection-end-line="138" selection-end-column="33" />
             </state>
           </provider>
@@ -103,35 +105,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontweb/application/controllers/slowquery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-714">
-              <caret line="21" column="74" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysqlmtop/check_mysql_status.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysqlmtop/check_mysql8_widget_hit_rate.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2287">
-              <caret line="135" column="10" selection-start-line="135" selection-start-column="10" selection-end-line="135" selection-end-column="10" />
+            <state relative-caret-position="306">
+              <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mysqlmtop/check_mysql8_status_ext.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="859">
-              <caret line="104" column="10" selection-start-line="104" selection-start-column="10" selection-end-line="104" selection-end-column="10" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor>
+                <caret column="6" selection-start-column="6" selection-end-column="6" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -156,15 +143,13 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysqlmtop/check_mysql_replication.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontweb/application/models/servers_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="646">
               <caret line="38" column="33" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="33" />
             </state>
           </provider>
@@ -239,6 +224,7 @@
         <option value="$PROJECT_DIR$/mysqlmtop/check_mysql8_widget_hit_rate.py" />
         <option value="$PROJECT_DIR$/mysqlmtop/check_mysql8_widget_bigtable.py" />
         <option value="$PROJECT_DIR$/mysqlmtop/check_mysql8_status_ext.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -248,7 +234,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="width" value="1920" />
     <option name="height" value="2080" />
   </component>
@@ -284,7 +270,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/广州联通" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -314,18 +300,20 @@
       <workItem from="1545029138750" duration="7231000" />
       <workItem from="1545036988919" duration="1419000" />
       <workItem from="1545097685824" duration="9477000" />
-      <workItem from="1545204263868" duration="7423000" />
+      <workItem from="1545204263868" duration="8022000" />
+      <workItem from="1545268993227" duration="2379000" />
+      <workItem from="1545373098154" duration="878000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25550000" />
+    <option name="totallyTimeSpent" value="29406000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1933" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17493333" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17813334" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -355,9 +343,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sql/mysqlmtop_data.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontweb/application/libraries/Layout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -572,27 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontweb/application/views/monitor/process.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="138" column="33" selection-start-line="138" selection-start-column="33" selection-end-line="138" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontweb/application/models/servers_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="38" column="33" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontweb/application/controllers/slowquery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-714">
-          <caret line="21" column="74" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysqlmtop/check_linux_resource.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -600,37 +564,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontweb/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2482">
-          <caret line="146" selection-start-line="146" selection-end-line="146" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysqlmtop/check_mysql8_process.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="791">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/mysqlmtop/check_mysql8_process.py" />
     <entry file="file://$PROJECT_DIR$/mysqlmtop/check_mysql_process.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="55" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysqlmtop/check_linux_resource.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="83" selection-start-line="17" selection-start-column="83" selection-end-line="17" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysqlmtop/check_mysql_replication.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mysqlmtop/check_mysql_status_ext.py">
@@ -640,13 +579,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysqlmtop/check_mysql8_widget_connect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/mysqlmtop/check_mysql8_widget_connect.py" />
     <entry file="file://$PROJECT_DIR$/mysqlmtop/check_mysql_widget_connect.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -661,24 +594,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysqlmtop/check_mysql_status.py">
+    <entry file="file://$PROJECT_DIR$/frontweb/application/views/monitor/process.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        <state relative-caret-position="2346">
+          <caret line="138" column="33" selection-start-line="138" selection-start-column="33" selection-end-line="138" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysqlmtop/check_mysql8_widget_hit_rate.py">
+    <entry file="file://$PROJECT_DIR$/frontweb/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2287">
-          <caret line="135" column="10" selection-start-line="135" selection-start-column="10" selection-end-line="135" selection-end-column="10" />
+        <state relative-caret-position="2482">
+          <caret line="146" selection-start-line="146" selection-end-line="146" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysqlmtop/check_linux_resource.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="83" selection-start-line="17" selection-start-column="83" selection-end-line="17" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysqlmtop/check_mysql_replication.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontweb/application/models/servers_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mysqlmtop/check_mysql8_status_ext.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="859">
+        <state relative-caret-position="1216">
           <caret line="104" column="10" selection-start-line="104" selection-start-column="10" selection-end-line="104" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysqlmtop/check_mysql8_widget_hit_rate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="859">
+          <caret line="135" column="10" selection-start-line="135" selection-start-column="10" selection-end-line="135" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysqlmtop/check_mysql_status.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontweb/application/controllers/slowquery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="6" selection-start-column="6" selection-end-column="6" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
