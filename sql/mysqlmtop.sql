@@ -364,6 +364,7 @@ DROP TABLE IF EXISTS `mysql_status`;
 CREATE TABLE `mysql_status` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `server_id` tinyint(4) DEFAULT NULL,
+  `slave_server_id` smallint(4) unsigned DEFAULT NULL,
   `application_id` smallint(4) DEFAULT NULL,
   `connect` varchar(20) DEFAULT NULL,
   `uptime` int(11) NOT NULL DEFAULT '0',

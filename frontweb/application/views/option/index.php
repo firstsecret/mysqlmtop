@@ -139,6 +139,26 @@
       <span class="help-inline">多人请用 ; 分割</span>
     </div>
    </div>
+
+    <div class="control-group error">
+    <label class="control-label" for="">*发送报警短信</label>
+    <div class="controls">
+        <select name="send_alarm_message" id="send_alarm_message" class="input-small">
+            <option value="1" <?php echo set_selected(1,$option['send_alarm_message']) ?> >开启</option>
+            <option value="0" <?php echo set_selected(0,$option['send_alarm_message']) ?> >关闭</option>
+        </select>
+        <span class="help-inline">此项如果关闭则不会发送报警邮件</span>
+    </div>
+    </div>
+
+    <div class="control-group error">
+        <label class="control-label" for="">*短信接收者</label>
+        <div class="controls">
+            <input type="text" id="message_to_list"  name="message_to_list" value="<?php echo $option['message_to_list'] ?>" class="input-xxlarge">
+            <span class="help-inline">多人请用 ; 分割</span>
+        </div>
+    </div>
+
    
    <div class="control-group info">
     <label class="control-label" for="">*监控频率</label>

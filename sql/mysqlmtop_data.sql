@@ -31,10 +31,12 @@ INSERT INTO `options` VALUES ('monitor_replication', '1', '开启复制监控', 
 INSERT INTO `options` VALUES ('monitor_process', '1', '开启进程监控', 'mysql');
 INSERT INTO `options` VALUES ('alarm', '1', '开启报警', 'mysql');
 INSERT INTO `options` VALUES ('send_alarm_mail', '0', '发生报警邮件', 'mysql');
+INSERT INTO `options` VALUES ('send_alarm_message', '0', '发生报警短信', 'mysql');
 INSERT INTO `options` VALUES ('frequency_monitor', '60', '监控频率', 'mysql');
 INSERT INTO `options` VALUES ('frequency_alarm', '300', '报警通知频率', 'mysql');
 INSERT INTO `options` VALUES ('slow_query_time', '5', '慢查询记录时间', 'mysql');
 INSERT INTO `options` VALUES ('mail_to_list', 'test@126.com', '报警邮件通知人员', 'mysql');
+INSERT INTO `options` VALUES ('message_to_list', '12345678', '报警短信通知人员', 'mysql');
 INSERT INTO `options` VALUES ('big_table_size', '5', '大表检查大于几GB的表', 'mysql');
 INSERT INTO `options` VALUES ('kill_process', '1', '开启进程管理', 'mysql');
 INSERT INTO `options` VALUES ('widget_bigtable_run', '0', '大表查询进程状态', 'mysql');

@@ -32,7 +32,8 @@ def check_mysql_replication(host,port,user,passwd,server_id,application_id):
         
     
         if slave_status <> 0:
-            read_only=cur.execute("select * from information_schema.global_variables where variable_name='read_only';")
+            #read_only=cur.execute("select * from information_schema.global_variables where variable_name='read_only';")
+            read_only=cur.execute("select * from performance_schema.global_variables where variable_name='read_only';")
             result=cur.fetchone()
             datalist.append(result[1])
             slave_info=cur.execute('show slave status;')
@@ -58,7 +59,8 @@ def check_mysql_replication(host,port,user,passwd,server_id,application_id):
             datalist.append(master_binlog_pos)
 
         elif master_thread >= 1:
-            read_only=cur.execute("select * from information_schema.global_variables where variable_name='read_only';")
+            # read_only=cur.execute("select * from information_schema.global_variables where variable_name='read_only';")
+            read_only=cur.execute("select * from performance_schema.global_variables where variable_name='read_only';")
             result=cur.fetchone()
             datalist.append(result[1])
             datalist.append('---')

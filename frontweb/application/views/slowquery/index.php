@@ -26,6 +26,7 @@ MySQLMTOP温馨提示：1.默认显示一台主机的慢查询,可通过检索�
 </div>
   
 <script src="./bootstrap/js/jquery-1.9.0.min.js"></script>
+<script src="./bootstrap/js/jquery.pin.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
   

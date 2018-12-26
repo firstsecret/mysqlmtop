@@ -84,7 +84,7 @@ class Chart extends Front_Controller {
             $chart_reslut[$i]['Bytes_sent'] = $dbdata['Bytes_sent'];  
         }
         $data['chart_reslut']=$chart_reslut;
-    
+
         $chart_option=array();
         if($time_span=='hour'){
             $chart_option['formatString']='%H:%M';

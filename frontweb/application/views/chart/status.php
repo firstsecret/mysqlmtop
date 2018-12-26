@@ -142,6 +142,7 @@ $(document).ready(function(){
     []    
     <?php } ?>
   ];
+  // console.log(data1)
   var plot1 = $.jqplot('QPS', [data1], {
     seriesDefaults: {
           rendererOptions: {

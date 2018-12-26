@@ -52,7 +52,7 @@ def main():
             job.start()
 
         for job in joblist:
-            job.join();
+            job.join()
     print("%s: controller finished." % (time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()),))
     
 

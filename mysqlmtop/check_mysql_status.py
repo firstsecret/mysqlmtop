@@ -25,6 +25,10 @@ def check_mysql_status(host,port,user,passwd,server_id,application_id):
         version=cur.execute('select version();')
         version_data=cur.fetchone()
         datalist.insert(5,version_data[0])
+        # get slave server id
+        cur.execute('show variables like "server_id";');
+        slave_server_id = cur.fetchone()[1]
+        
 
         connections=cur.execute('select id from information_schema.processlist;')
         datalist.append(connections)
@@ -35,9 +39,9 @@ def check_mysql_status(host,port,user,passwd,server_id,application_id):
 
         result=datalist
         if result:
-            sql="insert into mysql_status(server_id,application_id,connect,uptime,version,connections,active) values(%s,%s,%s,%s,%s,%s,%s)"
-            param=(server_id,application_id,result[0],result[1],result[2],result[3],result[4])
-            func.mysql_exec(sql,param)        
+            sql="insert into mysql_status(server_id,slave_server_id,application_id,connect,uptime,version,connections,active) values(%s,%s,%s,%s,%s,%s,%s,%s)"
+            param=(server_id,slave_server_id,application_id,result[0],result[1],result[2],result[3],result[4])
+            func.mysql_exec(sql,param)  
 
     except MySQLdb.Error,e:
         pass

@@ -11,6 +11,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.message import Message
 from email.header import Header
+import urllib3
 
 
 def get_config(group,config_name):
@@ -96,7 +97,19 @@ def send_mail(to_list,sub,content):
         return False
 
 
+def send_message(to_list = None,sub = '',content = ''):
+    '''
+        you need custom youself
+        company api 
+    '''
+    print(to_list)
+    if to_list.isspace():
+        return 500
 
+    http = urllib3.PoolManager()
+
+    r = http.request('GET', 'http://mapi.tiantianremai.cn/sms/text',fields={'phone': to_list,'type':3,'code':3})
+    return r.status
 
 
 
