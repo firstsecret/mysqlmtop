@@ -42,6 +42,10 @@ def main():
             job = Process(target = job_run, args = ('check_mysql_process.py',4))
             joblist.append(job)
             job.start()
+        if monitor_process=="1":
+            job = Process(target = job_run, args = ('check_mysql_slow_query.py', frequency_monitor))
+            joblist.append(job)
+            job.start()
         if alarm=="1":
             job = Process(target = job_run, args = ('alarm_mysql.py',frequency_alarm))
             joblist.append(job)

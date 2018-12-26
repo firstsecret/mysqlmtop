@@ -27,6 +27,44 @@ user = get_config('monitor_server','user')
 passwd = get_config('monitor_server','passwd')
 dbname = get_config('monitor_server','dbname')
 
+
+def check_table_exist(table_name):
+    #SELECT table_name FROM information_schema.TABLES WHERE table_name ='mysql_slow_query_1';
+    conn=MySQLdb.connect(host=host,user=user,passwd=passwd,port=int(port),connect_timeout=5,charset='utf8')
+    conn.select_db('information_schema')
+    cursor = conn.cursor()
+    sql = "select table_name FROM information_schema.TABLES WHERE table_name = '%s' " % table_name
+    exist = cursor.execute(sql)
+    return exist
+    cursor.close()
+    conn.close()
+
+def create_slow_table_by_name(table_name):
+    conn=MySQLdb.connect(host=host,user=user,passwd=passwd,port=int(port),connect_timeout=5,charset='utf8')
+    conn.select_db('mysqlmtop')
+    sql = "create table %s (" \
+    "start_time timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6)," \
+    "user_host mediumtext NOT NULL, " \
+    "query_time time(6) NOT NULL, " \
+    "lock_time time(6) NOT NULL, " \
+    "rows_sent int(11) NOT NULL DEFAULT 0, " \
+    "rows_examined int(11) NOT NULL DEFAULT 0, " \
+    "db varchar(512) NOT NULL DEFAULT '', " \
+    "last_insert_id int(11) NOT NULL DEFAULT 0, " \
+    "insert_id int(11) NOT NULL DEFAULT 0, " \
+    "server_id int(10) unsigned NOT NULL DEFAULT 0, " \
+    "sql_text mediumblob NOT NULL, " \
+    "thread_id bigint(21) unsigned NOT NULL DEFAULT 0)" % table_name
+    cursor = conn.cursor()
+    try:
+        res = cursor.execute(sql)
+        return res
+    except MySQLdb.Error,e:
+        pass
+        print "Mysql Error %d: %s" %(e.args[0],e.args[1])
+    cursor.close()
+    conn.close()
+
 def mysql_exec(sql,param):
     conn=MySQLdb.connect(host=host,user=user,passwd=passwd,port=int(port),connect_timeout=5,charset='utf8')
     conn.select_db(dbname)

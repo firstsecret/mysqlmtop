@@ -16,6 +16,13 @@ class Slowquery extends Front_Controller {
         return $res->num_rows() > 0 ? true : false;
 
     }
+
+    public function getList($server_id)
+    {
+        $res = $this->db->query("SELECT * FROM mysql.slow_log",false,true);
+        echo "<pre>";
+        var_dump($res);die;
+    }
     
     public function index(){
 
@@ -24,14 +31,10 @@ class Slowquery extends Front_Controller {
         
         $server_id=isset($_GET["server_id"]) ? $_GET["server_id"] : "";
 
-        if(empty($server_id)){
-            if(!empty($servers)){
-            $server_id=$servers[0]['id'];
-            }
-            else{
-                $server_id=0;
-            }
-        }
+        if(empty($server_id)) if(!empty($servers)) $server_id=$servers[0]['id'];
+
+        // edit logic
+//        $slow_logs = $this->getList($server_id);
 
         // is exist database;
         if($server_id > 0){
@@ -44,6 +47,8 @@ class Slowquery extends Front_Controller {
         else{
             $current_url= 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'?noparam=1';
         }
+
+
 
         $stime = !empty($_GET["stime"])? $_GET["stime"]: date('Y-m-d H:i',time()-3600*24*7);
         $etime = !empty($_GET["etime"])? $_GET["etime"]: date('Y-m-d H:i',time());

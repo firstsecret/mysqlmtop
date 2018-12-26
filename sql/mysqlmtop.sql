@@ -364,7 +364,6 @@ DROP TABLE IF EXISTS `mysql_status`;
 CREATE TABLE `mysql_status` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `server_id` tinyint(4) DEFAULT NULL,
-  `slave_server_id` smallint(4) unsigned DEFAULT NULL,
   `application_id` smallint(4) DEFAULT NULL,
   `connect` varchar(20) DEFAULT NULL,
   `uptime` int(11) NOT NULL DEFAULT '0',
@@ -372,6 +371,7 @@ CREATE TABLE `mysql_status` (
   `connections` varchar(20) DEFAULT NULL,
   `active` varchar(20) DEFAULT NULL,
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `slave_server_id` smallint(4) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `idx_connections` (`connections`) USING BTREE,
   KEY `idx_active` (`active`) USING BTREE
