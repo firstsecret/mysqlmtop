@@ -9,13 +9,6 @@ class Slowquery extends Front_Controller {
         $this->load->model("slowquery_model","slowquery");
 	}
 
-    public function getList($server_id)
-    {
-        $res = $this->db->query("SELECT * FROM mysql.slow_log",false,true);
-        echo "<pre>";
-        var_dump($res);die;
-    }
-    
     public function index(){
 
         $data["server"]=$servers=$this->server->get_total_slowquery_server();
@@ -39,7 +32,7 @@ class Slowquery extends Front_Controller {
         else{
             $current_url= 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'?noparam=1';
         }
-
+       
         $stime = !empty($_GET["stime"])? $_GET["stime"]: date('Y-m-d H:i',time()-3600*24*7);
         $etime = !empty($_GET["etime"])? $_GET["etime"]: date('Y-m-d H:i',time());
 //        $this->db->where("last_seen >=", $stime);
@@ -118,23 +111,26 @@ class Slowquery extends Front_Controller {
     public function detail(){
 //        var_dump($this->uri->segment(3));
 //        var_dump($this->uri->segment(4));die;
-        $start_time= str_replace('%',' ',$this->uri->segment(3));
-        $server_id=$this->uri->segment(4);
-        $pk = $this->uri->segment(5);
+//        $start_time= str_replace('%',' ',$this->uri->segment(3));
+        $server_id=$this->uri->segment(3);
+        $pk = $this->uri->segment(4);
 
-        $record = $this->slowquery->get_record_by_checksum($server_id,$start_time, $pk);
+        $record = $this->slowquery->get_record_by_checksum($server_id, $pk);
 
-		if(!$start_time || !$record){
+		if(!$pk || !$record){
 			show_404();
 		}
         else{
             $data['record']= $record;
         }
         //print_r($data['record']);
+        // explaion
+        $data['explain_res'] = $this->slowquery->explainSql($data['record']['sql_text'], $data['record']['db']);
+
         $data["cur_nav"]="slowquery_index";
         $this->layout->view("slowquery/detail",$data);
     }
-    
+
 }
 
 /* End of file slowquery.php */

@@ -3,6 +3,8 @@
 class Slowquery_model extends CI_Model
 {
 
+    public $noExplain = ['insert','update','delete'];
+
     function isexistTable($server_id)
     {
 
@@ -102,7 +104,7 @@ class Slowquery_model extends CI_Model
         }
     }*/
 
-    function get_record_by_checksum($server_id, $start_time, $pk)
+    function get_record_by_checksum($server_id, $pk)
     {
         if ($server_id && $server_id != 0 && $this->isexistTable($server_id)) {
             $ext = '_' . $server_id;
@@ -136,7 +138,25 @@ class Slowquery_model extends CI_Model
         }
     }
 
+    function explainSql($sql, $db): Array
+    {
+        $exe = substr(trim($sql), 0,6);
 
+        if(in_array(strtolower($exe), $this->noExplain)){
+            return [];
+        }
+        // re
+        $this->db->database = $db;
+        $this->db->db_select();
+
+        $res = $this->db->query("EXPLAIN " . $sql);
+
+        if ($res->num_rows() > 0) {
+            return $res->row_array();
+        }
+
+        return [];
+    }
 }
 
 /* End of file slowquery_model.php */

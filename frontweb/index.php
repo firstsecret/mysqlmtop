@@ -200,6 +200,8 @@ if (defined('ENVIRONMENT'))
  *
  */
 
+date_default_timezone_set('PRC');
+
 require_once BASEPATH.'core/CodeIgniter.php';
 
 /* End of file index.php */

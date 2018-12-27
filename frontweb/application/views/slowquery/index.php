@@ -149,7 +149,7 @@ $(document).ready(function(){
  <?php if(!empty($datalist)) {?>
  <?php foreach ($datalist  as $item):?>
     <tr style="font-size: 12px;">
-        <td><a href="<?php echo site_url('slowquery/detail/'.$item['start_time'].'/'.$setval['server_id'] . '/' . $item['id']) ?>" target="_blank"  title="点击进入详情"><?php  echo $item['start_time'] ?></a></td>
+        <td><a href="<?php echo site_url('slowquery/detail/' . $setval['server_id'] . '/' . $item['id']) ?>" target="_blank"  title="点击进入详情"><?php  echo $item['start_time'] ?></a></td>
          <td>
          <div class="message_head"><span class="message_icon"><i class="icon-plus"></i></span><cite><?php echo substring($item['sql_text'],0,40); ?>:</cite></div>
 		<div class="message_body" style="width: 300px;">

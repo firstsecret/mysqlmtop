@@ -41,77 +41,56 @@
         <td colspan="2"><?php echo $record['insert_id']; ?></td>
         <th>server_id</th>
         <td colspan="2"><?php echo $record['server_id']; ?></td>
-        <th>thread_id</th>
-        <td colspan="2"><?php echo $record['thread_id']; ?></td>
     </tr>
-<!--    <tr>-->
-<!--        <th rowspan="2">Query Time</th>-->
-<!--        <th>Query_time_sum</th>-->
-<!--        <th>Query_time_min</th>-->
-<!--        <th>Query_time_max</th>-->
-<!--        <th>Query_time_pct_95</th>-->
-<!--        <th>Query_time_stddev</th>-->
-<!--        <th>Query_time_median</th>-->
-<!--	</tr>-->
-<!--    <tr>-->
-<!--        <td>--><?php //echo $record['Query_time_sum']; ?><!--</td>-->
-<!--        <td>--><?php //echo $record['Query_time_min']; ?><!--</td>-->
-<!--        <td>--><?php //echo $record['Query_time_max']; ?><!--</td>-->
-<!--        <td>--><?php //echo $record['Query_time_pct_95']; ?><!--</td>-->
-<!--        <td>--><?php //echo $record['Query_time_stddev']; ?><!--</td>-->
-<!--        <td>--><?php //echo $record['Query_time_median']; ?><!--</td>-->
-<!--	</tr>-->
-<!--    <tr>-->
-<!--        <th rowspan="2">Lock Time</th>-->
-<!--        <th>Lock_time_sum</th>-->
-<!--        <th>Lock_time_min</th>-->
-<!--        <th>Lock_time_max</th>-->
-<!--        <th>Lock_time_pct_95</th>-->
-<!--        <th>Lock_time_stddev</th>-->
-<!--        <th>Lock_time_median</th>-->
-<!--	</tr>-->
-<!--    <tr>-->
-<!--        <td>--><?php //echo $record['Lock_time_sum']; ?><!--</td>-->
-<!--        <td>--><?php //echo $record['Lock_time_min']; ?><!--</td>-->
-<!--        <td>--><?php //echo $record['Lock_time_max']; ?><!--</td>-->
-<!--        <td>--><?php //echo $record['Lock_time_pct_95']; ?><!--</td>-->
-<!--        <td>--><?php //echo $record['Lock_time_stddev']; ?><!--</td>-->
-<!--        <td>--><?php //echo $record['Lock_time_median']; ?><!--</td>-->
-<!--	</tr>-->
-<!--    <tr>-->
-<!--        <th rowspan="2">Rows Sent</th>-->
-<!--        <th>Rows_sent_sum</th>-->
-<!--        <th>Rows_sent_min</th>-->
-<!--        <th>Rows_sent_max</th>-->
-<!--        <th>Rows_sent_pct_95</th>-->
-<!--        <th>Rows_sent_stddev</th>-->
-<!--        <th>Rows_sent_median</th>-->
-<!--	</tr>-->
-<!--    <tr>-->
-<!--        <td>--><?php //echo $record['Rows_sent_sum']; ?><!--</td>-->
-<!--        <td>--><?php //echo $record['Rows_sent_min']; ?><!--</td>-->
-<!--        <td>--><?php //echo $record['Rows_sent_max']; ?><!--</td>-->
-<!--        <td>--><?php //echo $record['Rows_sent_pct_95']; ?><!--</td>-->
-<!--        <td>--><?php //echo $record['Rows_sent_stddev']; ?><!--</td>-->
-<!--        <td>--><?php //echo $record['Rows_sent_median']; ?><!--</td>-->
-<!--	</tr>-->
-<!--    <tr>-->
-<!--        <th rowspan="2">Rows Examined</th>-->
-<!--        <th>Rows_examined_sum</th>-->
-<!--        <th>Rows_examined_min</th>-->
-<!--        <th>Rows_examined_max</th>-->
-<!--        <th>Rows_examined_pct_95</th>-->
-<!--        <th>Rows_examined_stddev</th>-->
-<!--        <th>Rows_examined_median</th>-->
-<!--	</tr>-->
-<!--    <tr>-->
-<!--        <td>--><?php //echo $record['Rows_examined_sum']; ?><!--</td>-->
-<!--        <td>--><?php //echo $record['Rows_examined_min']; ?><!--</td>-->
-<!--        <td>--><?php //echo $record['Rows_examined_max']; ?><!--</td>-->
-<!--        <td>--><?php //echo $record['Rows_examined_pct_95']; ?><!--</td>-->
-<!--        <td>--><?php //echo $record['Rows_examined_stddev']; ?><!--</td>-->
-<!--        <td>--><?php //echo $record['Rows_examined_median']; ?><!--</td>-->
-<!--	</tr>-->
-	 
+
+    <tr>
+        <th>thread_id</th>
+        <td colspan="6"><?php echo $record['thread_id']; ?></td>
+    </tr>
+
+<!--    explain start -->
+    <tr>
+        <th>explain_id</th>
+        <td colspan="2"><?php echo $explain_res['id'] ?? "无解析权限"; ?></td>
+        <th>select_type</th>
+        <td colspan="3"><?php echo $explain_res['select_type'] ?? '无解析权限'; ?></td>
+    </tr>
+
+    <tr>
+        <th>table</th>
+        <td colspan="2"><?php echo $explain_res['table'] ?? '无解析权限'; ?></td>
+        <th>partitions</th>
+        <td colspan="3"><?php echo $explain_res['select_type'] ?? '无解析权限'; ?></td>
+    </tr>
+
+    <tr>
+        <th>type</th>
+        <td colspan="2"><?php echo $explain_res['type'] ?? '无解析权限'; ?></td>
+        <th>possible_keys</th>
+        <td colspan="3"><?php echo $explain_res['possible_keys'] ?? '无解析权限'; ?></td>
+    </tr>
+
+    <tr>
+        <th>key</th>
+        <td colspan="2"><?php echo $explain_res['key'] ?? '无解析权限'; ?></td>
+        <th>key_len</th>
+        <td colspan="3"><?php echo $explain_res['key_len'] ?? '无解析权限'; ?></td>
+    </tr>
+
+    <tr>
+        <th>ref</th>
+        <td colspan="2"><?php echo $explain_res['ref'] ?? '无解析权限'; ?></td>
+        <th>rows</th>
+        <td colspan="3"><?php echo $explain_res['rows'] ?? '无解析权限'; ?></td>
+    </tr>
+
+    <tr>
+        <th>filtered</th>
+        <td colspan="2"><?php echo $explain_res['filtered'] ?? '无解析权限'; ?></td>
+        <th>Extra</th>
+        <td colspan="3"><?php echo $explain_res['Extra'] ?? '无解析权限'; ?></td>
+    </tr>
+<!--    explain end-->
+
 </table>
 
