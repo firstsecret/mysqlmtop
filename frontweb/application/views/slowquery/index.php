@@ -101,11 +101,11 @@ $(document).ready(function(){
   
   排序
   <select name="order" class="input-small" style="width: 110px;">
-  <option value="last_seen" <?php if($setval['order']=='last_seen') echo "selected"; ?> >last_seen</option>
-  <option value="ts_cnt" <?php if($setval['order']=='ts_cnt') echo "selected"; ?> >ts_cnt</option>
-  <option value="query_time_sum" <?php if($setval['order']=='query_time_sum') echo "selected"; ?> >query_time_sum</option>
-  <option value="query_time_min" <?php if($setval['order']=='query_time_min') echo "selected"; ?> >query_time_min</option>
-  <option value="query_time_max" <?php if($setval['order']=='query_time_max') echo "selected"; ?> >query_time_max</option>
+  <option value="start_time" <?php if($setval['order']=='start_time') echo "selected"; ?> >start_time</option>
+  <option value="query_time" <?php if($setval['order']=='query_time') echo "selected"; ?> >query_time</option>
+  <option value="lock_time" <?php if($setval['order']=='lock_time') echo "selected"; ?> >lock_time</option>
+<!--  <option value="query_time_min" --><?php //if($setval['order']=='query_time_min') echo "selected"; ?><!-- >query_time_min</option>-->
+<!--  <option value="query_time_max" --><?php //if($setval['order']=='query_time_max') echo "selected"; ?><!-- >query_time_max</option>-->
 
   </select>
   <select name="order_type" class="input-small" style="width: 110px;">
@@ -125,50 +125,48 @@ $(document).ready(function(){
 
 <table class="table table-hover table-striped  table-bordered table-condensed" style="font-size: 12px;" >
 	<tr>
-		<th colspan="4"><center>SQL</center></th>
-		<th colspan="3"><center>Query</center></th>
-        <th colspan="3"><center>Lock</center></th>
-		<th colspan="2"><center>Rows</center></th>
-		
+<!--		<th colspan="4"><center>SQL</center></th>-->
+<!--		<th colspan="3"><center>Query</center></th>-->
+<!--        <th colspan="3"><center>Lock</center></th>-->
+<!--		<th colspan="2"><center>Rows</center></th>-->
 
 	</tr>
     <tr>
-        <th>checksum</th>
-        <th>fringerprint <span class="collapse_buttons" ><a href="#" class="show_all_message">展开所有</a> <a href="#" class="collpase_all_message">合并所有</a></span></th>
-        <th>last_seen</th>
-        <th>ts_cnt</th>
-        <th>time_sum</th>
-		<th>time_min</th>
-        <th>time_max</th>
-        <th>time_sum</th>
-        <th>time_min</th>
-		<th>time_max</th>
-		<th>sent_sum</th>
-		<th>examined_sum</th>
-	
+        <th>start_time</th>
+        <th>sql_text <span class="collapse_buttons" ><a href="#" class="show_all_message">展开所有</a> <a href="#" class="collpase_all_message">合并所有</a></span></th>
+        <th>user_host</th>
+        <th>query_time</th>
+		<th>lock_time</th>
+        <th>rows_sent</th>
+        <th>rows_examined</th>
+        <th>db</th>
+		<th>last_insert_id</th>
+		<th>insert_id</th>
+		<th>server_id</th>
+		<th>thread_id</th>
 	</tr>
 	
  <?php if(!empty($datalist)) {?>
  <?php foreach ($datalist  as $item):?>
     <tr style="font-size: 12px;">
-        <td><a href="<?php echo site_url('slowquery/detail/'.$item['checksum'].'/'.$setval['server_id']) ?>" target="_blank"  title="点击进入详情"><?php  echo $item['checksum'] ?></a></td>
+        <td><a href="<?php echo site_url('slowquery/detail/'.$item['start_time'].'/'.$setval['server_id'] . '/' . $item['id']) ?>" target="_blank"  title="点击进入详情"><?php  echo $item['start_time'] ?></a></td>
          <td>
-         <div class="message_head"><span class="message_icon"><i class="icon-plus"></i></span><cite><?php echo substring($item['fingerprint'],0,40); ?>:</cite></div>
+         <div class="message_head"><span class="message_icon"><i class="icon-plus"></i></span><cite><?php echo substring($item['sql_text'],0,40); ?>:</cite></div>
 		<div class="message_body" style="width: 300px;">
-			<pre><span style="color: blue;"><?php echo $item['fingerprint']; ?></span></pre>
+			<pre><span style="color: blue;"><?php echo $item['sql_text']; ?></span></pre>
 		</div>
-        
-        <td><?php echo $item['last_seen'] ?></td>
-        <td><?php echo $item['ts_cnt'] ?></td>
-        <td><?php echo $item['Query_time_sum'] ?></td>
-        <td><?php echo $item['Query_time_min'] ?></td>
-        <td><?php echo $item['Query_time_max'] ?></td>
-        <td><?php echo $item['Lock_time_sum'] ?></td>
-        <td><?php echo $item['Lock_time_min'] ?></td>
-        <td><?php echo $item['Lock_time_max'] ?></td>
-        <td><?php echo $item['Rows_sent_sum'] ?></td>
-        <td><?php echo $item['Rows_examined_sum'] ?></td>
-       
+
+        <td><?php echo $item['user_host'] ?></td>
+        <td><?php echo $item['query_time'] ?></td>
+        <td><?php echo $item['lock_time'] ?></td>
+        <td><?php echo $item['rows_sent'] ?></td>
+        <td><?php echo $item['rows_examined'] ?></td>
+        <td><?php echo $item['db'] ?></td>
+        <td><?php echo $item['last_insert_id'] ?></td>
+        <td><?php echo $item['insert_id'] ?></td>
+        <td><?php echo $item['server_id'] ?></td>
+        <td><?php echo $item['thread_id'] ?></td>
+
         
 	</tr>
  <?php endforeach;?>

@@ -1,30 +1,47 @@
-<?php 
-class Slowquery_model extends CI_Model{
+<?php
 
-    function isexistTable($server_id){
+class Slowquery_model extends CI_Model
+{
 
-       $res =  $this->db->query("SELECT table_name FROM information_schema.TABLES WHERE table_name ='mysql_slow_query_review{$server_id}'",false,true);
+    function isexistTable($server_id)
+    {
 
-       return $res->num_rows() > 0 ? true : false;
+        $res = $this->db->query("SELECT table_name FROM information_schema.TABLES WHERE table_name ='mysql_slow_query_review_{$server_id}'", false, true);
+
+        return $res->num_rows() > 0 ? true : false;
 
     }
 
-	function get_total_rows($server_id){
-	    if($server_id && $server_id!=0 && $this->isexistTable($server_id)){
-            $ext = '_'.$server_id;
-        }
-        else{
-            $ext='';
+    /*
+    function get_total_rows($server_id)
+    {
+        if ($server_id && $server_id != 0 && $this->isexistTable($server_id)) {
+            $ext = '_' . $server_id;
+        } else {
+            $ext = '';
         }
 
-		$this->db->select('s.*,sh.*');
+        $this->db->select('s.*,sh.*');
         $this->db->from("mysql_slow_query_review$ext s");
-        $this->db->join("mysql_slow_query_review_history$ext sh", 's.checksum=sh.checksum','left');
-		return $this->db->count_all_results();
-	}
-    
- 
-	
+        $this->db->join("mysql_slow_query_review_history$ext sh", 's.checksum=sh.checksum', 'left');
+        return $this->db->count_all_results();
+    }*/
+
+    function get_total_rows($server_id)
+    {
+        if ($server_id && $server_id != 0 && $this->isexistTable($server_id)) {
+            $ext = '_' . $server_id;
+        } else {
+            $ext = '';
+        }
+
+        $this->db->select('*');
+        $this->db->from("mysql_slow_query_review$ext");
+        return $this->db->count_all_results();
+    }
+
+
+    /*
     function get_total_record_slowquery($limit,$offset,$server_id){
         if($server_id && $server_id!=0 && $this->isexistTable($server_id)){
             $ext = '_'.$server_id;
@@ -41,45 +58,83 @@ class Slowquery_model extends CI_Model{
         
         $query = $this->db->get();
         if ($query->num_rows() > 0)
-		{
-			return $query->result_array();
-		}
-    }
-    
-   
+        {
+            return $query->result_array();
+        }
+    }*/
 
-	function get_record_by_checksum($server_id,$checksum){
-	    if($server_id && $server_id!=0 && $this->isexistTable($server_id)){
-            $ext = '_'.$server_id;
+    function get_total_record_slowquery($limit, $offset, $server_id)
+    {
+        if ($server_id && $server_id != 0 && $this->isexistTable($server_id)) {
+            $ext = '_' . $server_id;
+        } else {
+            $ext = '';
         }
-        else{
-            $ext='';
+
+        $this->db->select('*');
+        $this->db->from("mysql_slow_query_review$ext");
+        $this->db->limit($limit, $offset);
+
+        $query = $this->db->get();
+
+        if ($query->num_rows() > 0) {
+            return $query->result_array();
         }
-	    $this->db->select('s.*,sh.*');
+
+        return [];
+    }
+
+    /*
+    function get_record_by_checksum($server_id, $checksum)
+    {
+        if ($server_id && $server_id != 0 && $this->isexistTable($server_id)) {
+            $ext = '_' . $server_id;
+        } else {
+            $ext = '';
+        }
+        $this->db->select('s.*,sh.*');
         $this->db->from("mysql_slow_query_review$ext s");
         $this->db->join("mysql_slow_query_review_history$ext sh", 's.checksum=sh.checksum');
-		$this->db->where('s.checksum',$checksum);
+        $this->db->where('s.checksum', $checksum);
         $query = $this->db->get();
-		if ($query->num_rows() > 0)
-		{
-			return $query->row_array();
-		}
-	}
-    
-    function get_analyze_day($server_id){
-        if($server_id && $server_id!=0 && $this->isexistTable($server_id)){
-            $ext = '_'.$server_id;
+        if ($query->num_rows() > 0) {
+            return $query->row_array();
         }
-        else{
-            $ext='';
+    }*/
+
+    function get_record_by_checksum($server_id, $start_time, $pk)
+    {
+        if ($server_id && $server_id != 0 && $this->isexistTable($server_id)) {
+            $ext = '_' . $server_id;
+        } else {
+            $ext = '';
         }
-        $query=$this->db->query("select * from (select DATE_FORMAT(last_seen,'%Y-%m-%d') as days,count(*) as count from mysql_slow_query_review$ext  group by days order by days desc limit 10) as total order by days asc ;");
-        if ($query->num_rows() > 0)
-        {
-           return $query->result_array(); 
+
+        $this->db->select("*");
+        $this->db->from("mysql_slow_query_review$ext");
+        $this->db->where('id', $pk);
+
+        $query = $this->db->get();
+
+        if ($query->num_rows() > 0) {
+            return $query->row_array();
+        }
+
+        return [];
+    }
+
+    function get_analyze_day($server_id)
+    {
+        if ($server_id && $server_id != 0 && $this->isexistTable($server_id)) {
+            $ext = '_' . $server_id;
+        } else {
+            $ext = '';
+        }
+        $query = $this->db->query("select * from (select DATE_FORMAT(last_seen,'%Y-%m-%d') as days,count(*) as count from mysql_slow_query_review$ext  group by days order by days desc limit 10) as total order by days asc ;");
+        if ($query->num_rows() > 0) {
+            return $query->result_array();
         }
     }
-	
 
 
 }

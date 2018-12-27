@@ -9,14 +9,6 @@ class Slowquery extends Front_Controller {
         $this->load->model("slowquery_model","slowquery");
 	}
 
-    function isexistTable($server_id){
-
-        $res =  $this->db->query("SELECT table_name FROM information_schema.TABLES WHERE table_name ='mysql_slow_query_review{$server_id}'",false,true);
-
-        return $res->num_rows() > 0 ? true : false;
-
-    }
-
     public function getList($server_id)
     {
         $res = $this->db->query("SELECT * FROM mysql.slow_log",false,true);
@@ -38,7 +30,7 @@ class Slowquery extends Front_Controller {
 
         // is exist database;
         if($server_id > 0){
-            if(!$this->isexistTable($server_id)) $server_id=0;
+            if(!$this->slowquery->isexistTable($server_id)) $server_id=0;
         }
         
         if(!empty($_GET["server_id"])){
@@ -48,13 +40,13 @@ class Slowquery extends Front_Controller {
             $current_url= 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'?noparam=1';
         }
 
-
-
         $stime = !empty($_GET["stime"])? $_GET["stime"]: date('Y-m-d H:i',time()-3600*24*7);
         $etime = !empty($_GET["etime"])? $_GET["etime"]: date('Y-m-d H:i',time());
-        $this->db->where("last_seen >=", $stime);
-        $this->db->where("last_seen <=", $etime);
-        
+//        $this->db->where("last_seen >=", $stime);
+//        $this->db->where("last_seen <=", $etime);
+        $this->db->where("start_time >=", $stime);
+        $this->db->where("start_time <=", $etime);
+
         //分页
 		$this->load->library('pagination');
 		$config['base_url'] = $current_url;
@@ -69,13 +61,15 @@ class Slowquery extends Front_Controller {
         
         $stime = !empty($_GET["stime"])? $_GET["stime"]: date('Y-m-d H:i',time()-3600*24*7);
         $etime = !empty($_GET["etime"])? $_GET["etime"]: date('Y-m-d H:i',time());
-        $this->db->where("last_seen >=", $stime);
-        $this->db->where("last_seen <=", $etime);
+//        $this->db->where("last_seen >=", $stime);
+//        $this->db->where("last_seen <=", $etime);
+        $this->db->where("start_time >=", $stime);
+        $this->db->where("start_time <=", $etime);
         $setval["stime"]=$stime;
         $setval["etime"]=$etime;
         
         
-        $order = !empty($_GET["order"])? $_GET["order"]: 'last_seen';
+        $order = !empty($_GET["order"])? $_GET["order"]: 'start_time';
         $order_type = !empty($_GET["order_type"])? $_GET["order_type"]: 'desc';
         $this->db->order_by($order,$order_type);
         $setval["order"]=$order;
@@ -90,12 +84,15 @@ class Slowquery extends Front_Controller {
         else{
             $ext='';
         }
+
+//        echo "<pre>";
+//        var_dump($data['datalist']);die;
         //日图表
         $reslut_day=array();
         for($i=15;$i>=0;$i--){
             $time=time()-3600*24*$i;
             $reslut_day[$i]['day']=$date= date('Y-m-d',$time);
-            $reslut_day[$i]['num'] = $this->db->query("select count(*) as num from mysql_slow_query_review$ext where DATE_FORMAT(last_seen,'%Y-%m-%d')='$date' ")->row()->num;;
+            $reslut_day[$i]['num'] = $this->db->query("select count(*) as num from mysql_slow_query_review$ext where DATE_FORMAT(start_time,'%Y-%m-%d')='$date' ")->row()->num;;
         }
         $data['analyze_day']=$reslut_day;
         //月图表
@@ -103,7 +100,7 @@ class Slowquery extends Front_Controller {
         for($i=12;$i>=0;$i--){
             $time=time()-3600*24*$i*31;
             $reslut_month[$i]['month']=$date= date('Y-m',$time);
-            $reslut_month[$i]['num'] = $this->db->query("select count(*) as num from mysql_slow_query_review$ext where DATE_FORMAT(last_seen,'%Y-%m')='$date' ")->row()->num;;
+            $reslut_month[$i]['num'] = $this->db->query("select count(*) as num from mysql_slow_query_review$ext where DATE_FORMAT(start_time,'%Y-%m')='$date' ")->row()->num;;
         }
         $data['analyze_month']=$reslut_month;
         //print_r($reslut_month);exit;
@@ -119,10 +116,15 @@ class Slowquery extends Front_Controller {
     }
     
     public function detail(){
-        $checksum=$this->uri->segment(3);
+//        var_dump($this->uri->segment(3));
+//        var_dump($this->uri->segment(4));die;
+        $start_time= str_replace('%',' ',$this->uri->segment(3));
         $server_id=$this->uri->segment(4);
-        $record = $this->slowquery->get_record_by_checksum($server_id,$checksum);
-		if(!$checksum || !$record){
+        $pk = $this->uri->segment(5);
+
+        $record = $this->slowquery->get_record_by_checksum($server_id,$start_time, $pk);
+
+		if(!$start_time || !$record){
 			show_404();
 		}
         else{
