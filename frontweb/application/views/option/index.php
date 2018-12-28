@@ -155,7 +155,7 @@
         <label class="control-label" for="">*短信接收者</label>
         <div class="controls">
             <input type="text" id="message_to_list"  name="message_to_list" value="<?php echo $option['message_to_list'] ?>" class="input-xxlarge">
-            <span class="help-inline">多人请用 ; 分割</span>
+            <span class="help-inline">暂只支持单人</span>
         </div>
     </div>
 

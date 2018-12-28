@@ -18,6 +18,14 @@
           <option name="port" value="18002" />
         </fileTransfer>
       </webServer>
+      <webServer id="2bf8509b-ecff-4d98-b2ad-b34aae545c31" name="xym test mysqlmtop" url="http://101.37.146.157">
+        <fileTransfer host="101.37.146.157" port="18002" rootFolder="/usr/local/mysqlmtop" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="18002" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

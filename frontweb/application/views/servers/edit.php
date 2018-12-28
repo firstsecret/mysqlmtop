@@ -85,6 +85,15 @@
     </div>
    </div>
     <div class="control-group">
+        <label class="control-label" for="">发送告警短信</label>
+        <div class="controls">
+            <select name="send_message" id="send_message" class="input-small">
+                <option value="1"  <?php echo set_selected(1,$record['send_message']) ?>>开启</option>
+                <option value="0"  <?php echo set_selected(0,$record['send_message']) ?>>关闭</option>
+            </select>
+        </div>
+    </div>
+    <div class="control-group">
     <label class="control-label" for="">总连接数告警</label>
     <div class="controls">
         <select name="alarm_connections" id="alarm_connections" class="input-small">

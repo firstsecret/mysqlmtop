@@ -48,6 +48,7 @@
         <th>应用</th>
 		<th>监控</th>
 		<th>邮件通知</th>
+        <th>短信通知</th>
         <th>慢查询</th>
         <th>总连接数</th>
 		<th>活动进程</th>
@@ -67,6 +68,7 @@
         <td><?php echo $item['display_name'] ?>(<?php echo $item['name'] ?>)</td>
         <td><?php echo check_on_off($item['status']) ?></td>
         <td><?php echo check_on_off($item['send_mail']) ?></td>
+        <td><?php echo check_on_off($item['send_message']) ?></td>
         <td><?php echo check_on_off($item['slow_query']) ?></td>
         <td><?php echo check_on_off($item['alarm_connections']) ?></td>
         <td><?php echo check_on_off($item['alarm_active']) ?></td>

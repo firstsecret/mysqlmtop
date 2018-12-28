@@ -4,14 +4,17 @@ from datetime import *
 import global_functions  as func
 
 
-message_to_list = func.get_option('message_to_list')
-messageto_list=message_to_list.split(';')
 
+phone = func.get_option('message_to_list')
 
-result = func.send_mail(messageto_list," I hope you can learn","Beautiful Day")
+values={}
+values['phone'] = phone
+values['type'] = 7
+values['signname'] = '小店监控'
+values['server'] = '10.18.1.1'
+values['errmsg'] = '测试报警功能'
+
+result = func.send_message(values)
+print "发送结果:"
 print result
-if result:
-    send_message_status = "success"
-else:
-    send_message_status = "fail"
-print "send_message_status:"+send_message_status
+

@@ -560,6 +560,7 @@ CREATE TABLE `servers` (
   `is_delete` tinyint(1) DEFAULT '0',
   `display_order` smallint(4) DEFAULT '0',
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `send_message` tinyint(2) DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `idx_host` (`host`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;

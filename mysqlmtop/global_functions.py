@@ -12,7 +12,8 @@ from email.mime.text import MIMEText
 from email.message import Message
 from email.header import Header
 import urllib3
-
+from urllib import urlencode
+import json
 
 def get_config(group,config_name):
     config = ConfigParser.ConfigParser()
@@ -137,20 +138,25 @@ def send_mail(to_list,sub,content):
         print str(e)
         return False
 
+message_url = get_config('message_server','message_url')
 
-def send_message(to_list = None,sub = '',content = ''):
+def send_message(values = {}):
     '''
-        you need custom youself
-        company api 
+        you can recode youself
     '''
-    print(to_list)
-    if to_list.isspace():
-        return 500
+    data= urlencode(values)
 
     http = urllib3.PoolManager()
 
-    r = http.request('GET', 'http://mapi.tiantianremai.cn/sms/text',fields={'phone': to_list,'type':3,'code':3})
-    return r.status
+    url = '%s?%s' % (message_url,data)
+
+    r = http.request('GET', url, headers={'Content-Type': 'application/x-www-form-urlencoded'})
+    # print(r.data)
+
+    if r.status <> 200:
+        return False
+    else:
+        return json.loads(r.data)['status']
 
 
 

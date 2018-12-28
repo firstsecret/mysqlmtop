@@ -77,6 +77,8 @@
         <th>告警时间</th>
         <th>邮件通知</th>
         <th>邮件发送成功</th>
+        <th>短信通知</th>
+        <th>短信发送成功</th>
 	</tr>
 	
  <?php if(!empty($datalist)) {?>
@@ -87,10 +89,12 @@
         <td><?php echo check_alarm_level($item['level']) ?></td>
         <td><?php echo $item['message']." 当前值:".$item['alarm_value']  ?></td>
         <td><?php echo $item['create_time'] ?></td>
-        <td><?php echo $item['send_mail_time'] ?></td>
+        <td><?php echo $item['send_message'] ? $item['send_message_time'] : $item['send_mail_time']?></td>
         <td><?php echo check_status($item['send_mail']) ?></td>
         <td><?php echo check_status($item['send_mail_status']) ?></td>
- 
+        <td><?php echo check_status($item['send_message']) ?></td>
+        <td><?php echo check_status($item['send_message_status']) ?></td>
+
 	</tr>
  <?php endforeach;?>
 <?php }else{  ?>
