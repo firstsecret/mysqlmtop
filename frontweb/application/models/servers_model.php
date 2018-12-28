@@ -37,6 +37,7 @@ class Servers_model extends CI_Model{
     function get_total_slowquery_server(){
         $this->db->where('slow_query',1);
         $this->db->order_by('host','asc');
+
         $query = $this->db->get($this->table);
 
 		if ($query->num_rows() > 0)

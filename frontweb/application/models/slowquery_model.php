@@ -3,7 +3,11 @@
 class Slowquery_model extends CI_Model
 {
 
-    public $noExplain = ['insert','update','delete'];
+    public $noExplain = [
+//        'insert',
+//        'update',
+//        'delete'
+    ];
 
     function isexistTable($server_id)
     {

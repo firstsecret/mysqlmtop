@@ -51,44 +51,44 @@
 <!--    explain start -->
     <tr>
         <th>explain_id</th>
-        <td colspan="2"><?php echo $explain_res['id'] ?? "无解析权限"; ?></td>
+        <td colspan="2"><?php echo $explain_res['id'] ?? NULL; ?></td>
         <th>select_type</th>
-        <td colspan="3"><?php echo $explain_res['select_type'] ?? '无解析权限'; ?></td>
+        <td colspan="3"><?php echo $explain_res['select_type'] ?? NULL; ?></td>
     </tr>
 
     <tr>
         <th>table</th>
-        <td colspan="2"><?php echo $explain_res['table'] ?? '无解析权限'; ?></td>
+        <td colspan="2"><?php echo $explain_res['table'] ?? NULL; ?></td>
         <th>partitions</th>
-        <td colspan="3"><?php echo $explain_res['select_type'] ?? '无解析权限'; ?></td>
+        <td colspan="3"><?php echo $explain_res['select_type'] ?? NULL; ?></td>
     </tr>
 
     <tr>
         <th>type</th>
-        <td colspan="2"><?php echo $explain_res['type'] ?? '无解析权限'; ?></td>
+        <td colspan="2"><?php echo $explain_res['type'] ?? NULL; ?></td>
         <th>possible_keys</th>
-        <td colspan="3"><?php echo $explain_res['possible_keys'] ?? '无解析权限'; ?></td>
+        <td colspan="3"><?php echo $explain_res['possible_keys'] ?? NULL; ?></td>
     </tr>
 
     <tr>
         <th>key</th>
-        <td colspan="2"><?php echo $explain_res['key'] ?? '无解析权限'; ?></td>
+        <td colspan="2"><?php echo $explain_res['key'] ?? NULL; ?></td>
         <th>key_len</th>
-        <td colspan="3"><?php echo $explain_res['key_len'] ?? '无解析权限'; ?></td>
+        <td colspan="3"><?php echo $explain_res['key_len'] ?? NULL; ?></td>
     </tr>
 
     <tr>
         <th>ref</th>
-        <td colspan="2"><?php echo $explain_res['ref'] ?? '无解析权限'; ?></td>
+        <td colspan="2"><?php echo $explain_res['ref'] ?? NULL; ?></td>
         <th>rows</th>
-        <td colspan="3"><?php echo $explain_res['rows'] ?? '无解析权限'; ?></td>
+        <td colspan="3"><?php echo $explain_res['rows'] ?? NULL; ?></td>
     </tr>
 
     <tr>
         <th>filtered</th>
-        <td colspan="2"><?php echo $explain_res['filtered'] ?? '无解析权限'; ?></td>
+        <td colspan="2"><?php echo $explain_res['filtered'] ?? NULL; ?></td>
         <th>Extra</th>
-        <td colspan="3"><?php echo $explain_res['Extra'] ?? '无解析权限'; ?></td>
+        <td colspan="3"><?php echo $explain_res['Extra'] ?? NULL; ?></td>
     </tr>
 <!--    explain end-->
 

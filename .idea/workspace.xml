@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c50c9f2b-2a03-4b18-bb73-303f1e73a7c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontweb/application/controllers/slowquery.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontweb/application/controllers/slowquery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontweb/application/core/MY_Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontweb/application/core/MY_Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontweb/application/models/servers_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontweb/application/models/servers_model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontweb/application/models/slowquery_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontweb/application/models/slowquery_model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontweb/application/views/slowquery/detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontweb/application/views/slowquery/detail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontweb/application/views/slowquery/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontweb/application/views/slowquery/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontweb/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontweb/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysqlmtop/alarm_mysql.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysqlmtop/alarm_mysql.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysqlmtop/etc/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/mysqlmtop/etc/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/mysqlmtop.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/mysqlmtop.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,25 +56,26 @@
           <entry key="project.closed" value="7" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="2" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.48" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="check_mysql8_status_ext" value="1" />
           <entry key="html" value="2" />
-          <entry key="ini" value="1" />
+          <entry key="ini" value="2" />
           <entry key="js" value="1" />
           <entry key="md" value="1" />
           <entry key="mtopctl" value="3" />
-          <entry key="php" value="67" />
-          <entry key="py" value="30" />
+          <entry key="php" value="74" />
+          <entry key="py" value="31" />
           <entry key="sh" value="3" />
           <entry key="sql" value="6" />
         </counts>
@@ -79,26 +83,28 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="2" />
-          <entry key="Ini" value="1" />
+          <entry key="Ini" value="2" />
           <entry key="JavaScript" value="1" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="67" />
-          <entry key="PLAIN_TEXT" value="37" />
+          <entry key="PHP" value="74" />
+          <entry key="PLAIN_TEXT" value="38" />
           <entry key="SQL" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="ini" value="17" />
           <entry key="md" value="12" />
-          <entry key="php" value="2724" />
+          <entry key="php" value="2835" />
           <entry key="py" value="186" />
           <entry key="sql" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="Ini" value="17" />
           <entry key="Markdown" value="12" />
-          <entry key="PHP" value="2724" />
+          <entry key="PHP" value="2835" />
           <entry key="PLAIN_TEXT" value="186" />
           <entry key="SQL" value="37" />
         </counts>
@@ -107,33 +113,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontweb/application/controllers/slowquery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+            <state relative-caret-position="580">
+              <caret line="125" column="35" lean-forward="true" selection-start-line="125" selection-start-column="35" selection-end-line="125" selection-end-column="35" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontweb/application/models/servers_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontweb/application/controllers/servers.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mysqlmtop/global_functions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1632">
+              <caret line="96" column="38" selection-start-line="96" selection-start-column="38" selection-end-line="96" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontweb/application/controllers/application.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontweb/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="716">
-              <caret line="202" column="33" selection-start-line="202" selection-start-column="33" selection-end-line="202" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontweb/application/views/slowquery/detail.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1547">
-              <caret line="91" column="9" lean-forward="true" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
-              <folding>
-                <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="257">
+              <caret line="175" column="67" selection-start-line="175" selection-start-column="67" selection-end-line="175" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -141,8 +162,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontweb/application/models/slowquery_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2431">
-              <caret line="143" lean-forward="true" selection-start-line="143" selection-end-line="143" />
+            <state relative-caret-position="391">
+              <caret line="23" column="79" lean-forward="true" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontweb/application/views/slowquery/detail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="901">
+              <caret line="53" column="61" selection-start-line="53" selection-start-column="61" selection-end-line="53" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mysqlmtop/etc/config.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -150,29 +189,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontweb/application/views/slowquery/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="807">
-              <caret line="125" column="86" lean-forward="true" selection-start-line="125" selection-start-column="86" selection-end-line="125" selection-end-column="86" />
-              <folding>
-                <element signature="n#style#0;n#table#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontweb/system/database/drivers/mysqli/mysqli_result.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontweb/system/database/DB_result.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-867">
-              <caret line="62" column="40" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="40" />
+            <state relative-caret-position="2125">
+              <caret line="125" column="86" selection-start-line="125" selection-start-column="86" selection-end-line="125" selection-end-column="86" />
             </state>
           </provider>
         </entry>
@@ -181,8 +199,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pinned</find>
-      <find>mysql_slow</find>
       <find>slow_log</find>
       <find>db_con</find>
       <find>function from</find>
@@ -192,7 +208,6 @@
       <find>getList</find>
       <find>get_total_record_slowquery</find>
       <find>isexistTable</find>
-      <find>get_total_slowquery_server</find>
       <find>mysql_slow_query_review_history</find>
       <find>get_total_rows</find>
       <find>rsegments</find>
@@ -211,6 +226,9 @@
       <find>reconnect</find>
       <find>get_record_by_checksum</find>
       <find>last_seen</find>
+      <find>send_mail</find>
+      <find>get_option</find>
+      <find>get_total_slowquery_server</find>
     </findStrings>
     <replaceStrings>
       <replace>global_status</replace>
@@ -221,11 +239,11 @@
       <dir>C:\Users\Admin\Downloads\mysqlmtop-master\mysqlmtop-master\frontweb\application</dir>
       <dir>C:\Users\Admin\Downloads\mysqlmtop-master\mysqlmtop-master\frontweb</dir>
       <dir>D:\phpstudy\PHPTutorial\WWW\mysqlmtop\dash</dir>
-      <dir>D:\phpstudy\PHPTutorial\WWW\mysqlmtop\mysqlmtop</dir>
       <dir>D:\phpstudy\PHPTutorial\WWW\mysqlmtop</dir>
       <dir>D:\phpstudy\PHPTutorial\WWW\mysqlmtop\frontweb\system</dir>
       <dir>D:\phpstudy\PHPTutorial\WWW\mysqlmtop\frontweb\application</dir>
       <dir>D:\phpstudy\PHPTutorial\WWW\mysqlmtop\frontweb</dir>
+      <dir>D:\phpstudy\PHPTutorial\WWW\mysqlmtop\mysqlmtop</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -239,7 +257,6 @@
         <option value="$PROJECT_DIR$/frontweb/application/config/database.php" />
         <option value="$PROJECT_DIR$/frontweb/system/core/CodeIgniter.php" />
         <option value="$PROJECT_DIR$/frontweb/application/controllers/servers.php" />
-        <option value="$PROJECT_DIR$/frontweb/application/models/servers_model.php" />
         <option value="$PROJECT_DIR$/dash/index.html" />
         <option value="$PROJECT_DIR$/frontweb/application/views/layout_main.php" />
         <option value="$PROJECT_DIR$/frontweb/application/models/linux_model.php" />
@@ -261,10 +278,13 @@
         <option value="$PROJECT_DIR$/sql/mysqlmtop.sql" />
         <option value="$PROJECT_DIR$/frontweb/application/views/slowquery/index.php" />
         <option value="$PROJECT_DIR$/frontweb/system/core/Router.php" />
+        <option value="$PROJECT_DIR$/frontweb/application/controllers/slowquery.php" />
+        <option value="$PROJECT_DIR$/frontweb/application/models/servers_model.php" />
+        <option value="$PROJECT_DIR$/frontweb/application/core/MY_Controller.php" />
+        <option value="$PROJECT_DIR$/frontweb/index.php" />
         <option value="$PROJECT_DIR$/frontweb/application/models/slowquery_model.php" />
         <option value="$PROJECT_DIR$/frontweb/application/views/slowquery/detail.php" />
-        <option value="$PROJECT_DIR$/frontweb/index.php" />
-        <option value="$PROJECT_DIR$/frontweb/application/controllers/slowquery.php" />
+        <option value="$PROJECT_DIR$/mysqlmtop/etc/config.ini" />
       </list>
     </option>
   </component>
@@ -303,6 +323,39 @@
               <item name="mysqlmtop" type="462c0819:PsiDirectoryNode" />
               <item name="frontweb" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mysqlmtop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mysqlmtop" type="462c0819:PsiDirectoryNode" />
+              <item name="frontweb" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mysqlmtop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mysqlmtop" type="462c0819:PsiDirectoryNode" />
+              <item name="frontweb" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mysqlmtop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mysqlmtop" type="462c0819:PsiDirectoryNode" />
+              <item name="frontweb" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="slowquery" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mysqlmtop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mysqlmtop" type="462c0819:PsiDirectoryNode" />
+              <item name="mysqlmtop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mysqlmtop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mysqlmtop" type="462c0819:PsiDirectoryNode" />
+              <item name="mysqlmtop" type="462c0819:PsiDirectoryNode" />
+              <item name="etc" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -348,18 +401,19 @@
       <workItem from="1545614299712" duration="11352000" />
       <workItem from="1545700751818" duration="3719000" />
       <workItem from="1545787148176" duration="21209000" />
-      <workItem from="1545873752485" duration="14261000" />
+      <workItem from="1545873752485" duration="19078000" />
+      <workItem from="1545959988299" duration="1766000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83258000" />
+    <option name="totallyTimeSpent" value="89841000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1933" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18506667" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1872" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -373,7 +427,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="File Transfer" order="9" weight="0.3286334" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -389,47 +443,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mysqlmtop/check_mysql8_status_ext.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1216">
-          <caret line="104" column="10" selection-start-line="104" selection-start-column="10" selection-end-line="104" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="6" selection-start-column="6" selection-end-column="6" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontweb/application/views/monitor/process.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2346">
-          <caret line="138" column="33" selection-start-line="138" selection-start-column="33" selection-end-line="138" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysqlmtop/check_mysql8_widget_hit_rate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="60" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysqlmtop/check_linux_resource.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="83" selection-start-line="17" selection-start-column="83" selection-end-line="17" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysqlmtop/check_mysql_replication.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/password/password.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
@@ -542,13 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontweb/application/models/servers_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontweb/application/models/monitor_model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -591,9 +597,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/mysqlmtop/mtopd.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysqlmtop/global_functions.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/frontweb/system/core/URI.php">
@@ -667,17 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontweb/application/views/slowquery/detail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="91" column="9" lean-forward="true" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontweb/system/database/DB.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-120">
@@ -699,34 +691,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontweb/application/models/slowquery_model.php">
+    <entry file="file://$PROJECT_DIR$/frontweb/application/controllers/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2431">
-          <caret line="143" lean-forward="true" selection-start-line="143" selection-end-line="143" />
+        <state relative-caret-position="-204" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontweb/system/core/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-114">
+          <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frontweb/application/core/MY_Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontweb/application/models/servers_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontweb/application/controllers/servers.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysqlmtop/global_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1632">
+          <caret line="96" column="38" selection-start-line="96" selection-start-column="38" selection-end-line="96" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontweb/application/controllers/application.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/frontweb/application/views/slowquery/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="807">
-          <caret line="125" column="86" lean-forward="true" selection-start-line="125" selection-start-column="86" selection-end-line="125" selection-end-column="86" />
-          <folding>
-            <element signature="n#style#0;n#table#1;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="2125">
+          <caret line="125" column="86" selection-start-line="125" selection-start-column="86" selection-end-line="125" selection-end-column="86" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontweb/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="716">
-          <caret line="202" column="33" selection-start-line="202" selection-start-column="33" selection-end-line="202" selection-end-column="33" />
+        <state relative-caret-position="257">
+          <caret line="175" column="67" selection-start-line="175" selection-start-column="67" selection-end-line="175" selection-end-column="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontweb/application/controllers/slowquery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+        <state relative-caret-position="580">
+          <caret line="125" column="35" lean-forward="true" selection-start-line="125" selection-start-column="35" selection-end-line="125" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontweb/application/models/slowquery_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="79" lean-forward="true" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontweb/application/views/slowquery/detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" column="61" selection-start-line="53" selection-start-column="61" selection-end-line="53" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysqlmtop/etc/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
         </state>
       </provider>
     </entry>

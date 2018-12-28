@@ -14,7 +14,6 @@ abstract class Front_Controller extends CI_Controller
 	{
 		parent::__construct();
         self::check_login();
-              
 	}
 	
 	/*

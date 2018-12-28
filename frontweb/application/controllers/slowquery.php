@@ -25,14 +25,14 @@ class Slowquery extends Front_Controller {
         if($server_id > 0){
             if(!$this->slowquery->isexistTable($server_id)) $server_id=0;
         }
-        
+
         if(!empty($_GET["server_id"])){
             $current_url= 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
         }
         else{
             $current_url= 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'?noparam=1';
         }
-       
+
         $stime = !empty($_GET["stime"])? $_GET["stime"]: date('Y-m-d H:i',time()-3600*24*7);
         $etime = !empty($_GET["etime"])? $_GET["etime"]: date('Y-m-d H:i',time());
 //        $this->db->where("last_seen >=", $stime);

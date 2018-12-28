@@ -113,6 +113,8 @@ def send_alarm_mail():
     else:
         pass
 
+def send_alarm_message():
+    pass
 
 if __name__ == '__main__':
     get_alarm_mysql_status()

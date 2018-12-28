@@ -50,6 +50,7 @@ CREATE TABLE `alarm` (
   `level` varchar(50) DEFAULT NULL,
   `message` varchar(255) DEFAULT NULL,
   `send_mail` tinyint(2) DEFAULT NULL,
+  `send_message` tinyint(2) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
@@ -70,6 +71,9 @@ CREATE TABLE `alarm_history` (
   `send_mail` tinyint(2) DEFAULT NULL,
   `send_mail_status` tinyint(2) DEFAULT NULL,
   `send_mail_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `send_message` tinyint(2) DEFAULT NULL,
+  `send_message_status` tinyint(2) DEFAULT NULL,
+  `send_message_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP
   PRIMARY KEY (`id`),
   KEY `idx_application_id` (`application_id`),
   KEY `idx_server_id` (`server_id`),
