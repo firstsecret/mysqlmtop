@@ -110,6 +110,19 @@
         <span class="help-inline">查找数据库中大于多少GB的表</span>
     </div>
    </div>
+
+
+    <div class="control-group success">
+        <label class="control-label" for="">报警通知方式</label>
+        <div class="controls">
+            <select name="choice_message_or_mail" id="choice_message_or_mail" class="input-small">
+                <option value="0" <?php echo set_selected(0,$option['choice_message_or_mail']) ?>> 邮箱</option>
+                <option value="1" <?php echo set_selected(1,$option['choice_message_or_mail']) ?>> 短信</option>
+            </select>
+            <span class="help-inline">选择报警的通知方式</span>
+        </div>
+    </div>
+
    
    <div class="control-group error">
     <label class="control-label" for="">*开启告警</label>

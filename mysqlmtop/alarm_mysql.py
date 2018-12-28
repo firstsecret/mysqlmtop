@@ -165,6 +165,16 @@ def send_alarm_message():
 
     else:
         pass
+
+
+def start_message_or_mail():
+    choice_message_or_mail = int(func.get_option('choice_message_or_mail'))
+    if choice_message_or_mail == 1:
+        #message
+        send_alarm_message()
+    elif choice_message_or_mail == 0:
+        send_alarm_mail()
+    pass
    
 
 if __name__ == '__main__':
@@ -172,7 +182,7 @@ if __name__ == '__main__':
     get_alarm_mysql_replcation()
     # 不能同时都开
     # send_alarm_mail()
-    send_alarm_message()
+    start_message_or_mail()
 
 
 

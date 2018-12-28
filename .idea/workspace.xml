@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c50c9f2b-2a03-4b18-bb73-303f1e73a7c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontweb/application/controllers/servers.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontweb/application/controllers/servers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontweb/application/models/alarm_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontweb/application/models/alarm_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontweb/application/views/alarm/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontweb/application/views/alarm/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontweb/application/views/index/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontweb/application/views/index/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontweb/application/views/option/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontweb/application/views/option/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontweb/application/views/servers/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontweb/application/views/servers/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontweb/application/views/servers/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/frontweb/application/views/servers/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysqlmtop/alarm_mysql.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysqlmtop/alarm_mysql.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysqlmtop/etc/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/mysqlmtop/etc/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysqlmtop/global_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysqlmtop/global_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysqlmtop/test_send_message.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysqlmtop/test_send_message.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/mysqlmtop.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/mysqlmtop.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/mysqlmtop_data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/mysqlmtop_data.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +67,7 @@
           <entry key="js" value="1" />
           <entry key="md" value="1" />
           <entry key="mtopctl" value="3" />
-          <entry key="php" value="84" />
+          <entry key="php" value="87" />
           <entry key="py" value="33" />
           <entry key="sh" value="3" />
           <entry key="sql" value="6" />
@@ -91,7 +79,7 @@
           <entry key="Ini" value="2" />
           <entry key="JavaScript" value="1" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="84" />
+          <entry key="PHP" value="87" />
           <entry key="PLAIN_TEXT" value="40" />
           <entry key="SQL" value="6" />
         </counts>
@@ -100,7 +88,7 @@
         <counts>
           <entry key="ini" value="17" />
           <entry key="md" value="12" />
-          <entry key="php" value="3229" />
+          <entry key="php" value="3284" />
           <entry key="py" value="202" />
           <entry key="sql" value="37" />
         </counts>
@@ -109,7 +97,7 @@
         <counts>
           <entry key="Ini" value="17" />
           <entry key="Markdown" value="12" />
-          <entry key="PHP" value="3229" />
+          <entry key="PHP" value="3284" />
           <entry key="PLAIN_TEXT" value="202" />
           <entry key="SQL" value="37" />
         </counts>
@@ -118,18 +106,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mysqlmtop/global_functions.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontweb/application/controllers/option.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
+            <state relative-caret-position="374">
+              <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mysqlmtop/test_send_message.py">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontweb/application/views/option/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="597">
+              <caret line="119" column="99" lean-forward="true" selection-start-line="119" selection-start-column="99" selection-end-line="119" selection-end-column="99" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontweb/application/controllers/application.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -220,7 +221,6 @@
         <option value="$PROJECT_DIR$/frontweb/application/models/slowquery_model.php" />
         <option value="$PROJECT_DIR$/frontweb/application/views/slowquery/detail.php" />
         <option value="$PROJECT_DIR$/mysqlmtop/etc/config.ini" />
-        <option value="$PROJECT_DIR$/frontweb/application/views/option/index.php" />
         <option value="$PROJECT_DIR$/mysqlmtop/global_functions.py" />
         <option value="$PROJECT_DIR$/frontweb/application/views/servers/index.php" />
         <option value="$PROJECT_DIR$/frontweb/application/views/servers/edit.php" />
@@ -228,6 +228,7 @@
         <option value="$PROJECT_DIR$/frontweb/application/models/alarm_model.php" />
         <option value="$PROJECT_DIR$/frontweb/application/views/alarm/index.php" />
         <option value="$PROJECT_DIR$/frontweb/application/views/index/index.php" />
+        <option value="$PROJECT_DIR$/frontweb/application/views/option/index.php" />
       </list>
     </option>
   </component>
@@ -238,7 +239,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.2" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1920" />
     <option name="height" value="2080" />
   </component>
@@ -272,15 +273,20 @@
               <item name="mysqlmtop" type="462c0819:PsiDirectoryNode" />
               <item name="frontweb" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mysqlmtop" type="b2602c69:ProjectViewProjectNode" />
               <item name="mysqlmtop" type="462c0819:PsiDirectoryNode" />
               <item name="frontweb" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mysqlmtop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mysqlmtop" type="462c0819:PsiDirectoryNode" />
+              <item name="frontweb" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mysqlmtop" type="b2602c69:ProjectViewProjectNode" />
@@ -295,7 +301,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravelshow/laravelshow" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
@@ -332,16 +338,15 @@
       <workItem from="1545700751818" duration="3719000" />
       <workItem from="1545787148176" duration="21209000" />
       <workItem from="1545873752485" duration="19078000" />
-      <workItem from="1545959988299" duration="12417000" />
+      <workItem from="1545959988299" duration="14409000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100492000" />
+    <option name="totallyTimeSpent" value="102484000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1933" height="1053" extended-state="7" />
-    <editor active="true" />
+    <frame x="-6" y="-6" width="1933" height="1053" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1872" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -384,13 +389,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-255">
           <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontweb/application/controllers/option.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -583,13 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontweb/application/views/option/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="151" column="10" lean-forward="true" selection-start-line="151" selection-start-column="10" selection-end-line="151" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysqlmtop/etc/config.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -684,9 +675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontweb/application/controllers/application.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontweb/application/controllers/slowquery.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
@@ -711,12 +699,33 @@
     <entry file="file://$PROJECT_DIR$/mysqlmtop/global_functions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
-          <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
+          <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mysqlmtop/test_send_message.py">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontweb/application/views/option/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="597">
+          <caret line="119" column="99" lean-forward="true" selection-start-line="119" selection-start-column="99" selection-end-line="119" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontweb/application/controllers/application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontweb/application/controllers/option.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

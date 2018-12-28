@@ -42,3 +42,4 @@ INSERT INTO `options` VALUES ('kill_process', '1', '开启进程管理', 'mysql'
 INSERT INTO `options` VALUES ('widget_bigtable_run', '0', '大表查询进程状态', 'mysql');
 INSERT INTO `options` VALUES ('widget_hit_rate_run', '0', '命中率查询进程状态', 'mysql');
 INSERT INTO `options` VALUES ('widget_connect_run', '0', '连接来源查询进程状态', 'mysql');
+INSERT INTO `options` VALUES ('choice_message_or_mail', '0', '选择短信或邮箱通知', 'mysql');
