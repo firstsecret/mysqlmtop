@@ -138,17 +138,32 @@ def send_alarm_message():
             level=line[9]
             message=line[10]
             send_message=line[11]
+
+            send_message_status = 0
             if send_alarm_message == "1":
                 if send_message==1:
-                    values={}
-                    values['phone'] = phone
-                    values['type'] = 7
-                    values['signname'] = '小店监控'
-                    values['server'] = host
-                    values['errmsg'] = message
 
-                    result = func.send_message(values) 
-                    if result == True or result == 'true' or result == 'True':
+                    phone_list = phone.split(';')
+
+                    all_send_result = []
+
+                    for i in phone_list:
+                        values={}
+                        values['phone'] = i
+                        values['type'] = 7
+                        values['signname'] = '小店监控'
+                        values['server'] = host
+                        values['errmsg'] = message
+
+                        result = func.send_message(values) 
+                        all_send_result.append(result)
+
+                    all_flag = True
+                    # 有一人收到 成功发送
+                    for index,res  in enumerate(all_send_result):
+                        if res == True:
+                            all_flag = True
+                    if all_flag:
                         send_message_status = 1
                     else:
                         send_message_status = 0
@@ -169,12 +184,14 @@ def send_alarm_message():
 
 def start_message_or_mail():
     choice_message_or_mail = int(func.get_option('choice_message_or_mail'))
-    if choice_message_or_mail == 1:
-        #message
-        send_alarm_message()
-    elif choice_message_or_mail == 0:
-        send_alarm_mail()
-    pass
+    try:
+        if choice_message_or_mail == 1:
+            #message
+            send_alarm_message()
+        elif choice_message_or_mail == 0:
+            send_alarm_mail()
+    except Exception as e:
+        print(e)
    
 
 if __name__ == '__main__':

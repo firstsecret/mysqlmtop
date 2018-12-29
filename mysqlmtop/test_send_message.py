@@ -17,4 +17,5 @@ values['errmsg'] = '测试报警功能'
 result = func.send_message(values)
 print "发送结果:"
 print result
+print type(result)
 

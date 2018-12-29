@@ -156,7 +156,8 @@ def send_message(values = {}):
     if r.status <> 200:
         return False
     else:
-        return json.loads(r.data)['status']
+        res = json.loads(r.data)['status']
+        return res
 
 
 

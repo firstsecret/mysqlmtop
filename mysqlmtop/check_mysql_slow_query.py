@@ -38,9 +38,9 @@ def check_mysql_slow_query(host,port,user,passwd,server_id,application_id):
 		mysqlmtop_slow_query = cur.fetchone()
 		# mysqlmtop slow log end
 
-		where_log = 'server_id = %d' % slave_server_id
+		where_log = "db != 'mysqlmtop' and `server_id` = %d" % slave_server_id
 		if mysqlmtop_slow_query:
-			where_log = "server_id = %d and `start_time` > '%s'" % (slave_server_id,mysqlmtop_slow_query[1])
+			where_log = "db != 'mysqlmtop' and `server_id` = %d and `start_time` > '%s'" % (slave_server_id,mysqlmtop_slow_query[1])
 
 		msql = "select * from mysql.slow_log where %s order by start_time desc " % where_log
 		cur.execute(msql)
