@@ -40,7 +40,7 @@ def check_mysql_slow_query(host,port,user,passwd,server_id,application_id):
 
 		where_log = "db != 'mysqlmtop' and `server_id` = %d" % slave_server_id
 		if mysqlmtop_slow_query:
-			where_log = "db != 'mysqlmtop' and `server_id` = %d and `start_time` > '%s'" % (slave_server_id,mysqlmtop_slow_query[1])
+			where_log = "db != 'mysqlmtop' and `server_id` = %d and `start_time` > '%s'" % (slave_server_id,'2018-01-01 00:00:00')
 
 		msql = "select * from mysql.slow_log where %s order by start_time desc " % where_log
 		cur.execute(msql)
@@ -63,7 +63,7 @@ def check_mysql_slow_query(host,port,user,passwd,server_id,application_id):
 			# 	one_slow_query[11])
 			# print(insert_sql)
 			# cur2.execute(insert_sql)
-			param = (int(server_id), 
+			param = ( 
 				one_slow_query[0], 
 				one_slow_query[1],
 				one_slow_query[2],
@@ -76,13 +76,15 @@ def check_mysql_slow_query(host,port,user,passwd,server_id,application_id):
 				one_slow_query[9],
 				one_slow_query[10],
 				one_slow_query[11])
-			insert_sql = "insert into mysqlmtop.mysql_slow_query_review_%s " \
+			insert_sql = "insert into mysqlmtop.test_slow " \
 			"(`start_time`,`user_host`,`query_time`,`lock_time`,`rows_sent`,`rows_examined`,`db`,`last_insert_id`,`insert_id`,`server_id`,`sql_text`,`thread_id`) " \
 			"values('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s',\"%s\",%s);" % param
-			
-			#func.mysql_exec(insert_sql, param)
-			func.mysql_exec(insert_sql, None)
+			print(insert_sql)
+			# print insert_sql % param
+			# func.mysql_exec(insert_sql,param)
+			func.mysql_query(insert_sql)
 			one_slow_query = cur.fetchone()
+			one_slow_query = None
 
 	except MySQLdb.Error,e:
 		print(e)

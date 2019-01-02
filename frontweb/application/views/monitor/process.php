@@ -133,7 +133,7 @@ $(document).ready(function(){
         <th >SQL Info <span class="collapse_buttons" ><a href="#" class="show_all_message">展开所有SQL</a> <a href="#" class="collpase_all_message">合并所有SQL</a></span></th>         
         <th>主机</th>
         <th>进程管理</th>
-</tr>
+        </tr>
  <?php if(!empty($datalist)) {?>
  <?php foreach ($datalist  as $item):?>
     <tr style="font-size: 12px;">
